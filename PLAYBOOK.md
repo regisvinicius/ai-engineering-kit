@@ -31,6 +31,8 @@ Feature specifications and design requirements.
 /workflows  
 Guidelines that define how development steps should be executed.
 
+`workflows/execute-work-item.md` is the practical checklist for starting and completing a new user story or bug.
+
 /scripts  
 Project scripts such as `scripts/sync-project-context.sh`.
 
@@ -88,6 +90,8 @@ Work should follow this sequence:
 7. polish
 
 Each step has a corresponding workflow document in `/workflows`.
+
+For the practical end-to-end execution flow of a story or bug, start with `workflows/execute-work-item.md`.
 
 ---
 

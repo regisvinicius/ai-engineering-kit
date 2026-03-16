@@ -296,10 +296,15 @@ render_task_workflow_lines() {
   if [ -f "$PROJECT_ROOT/tasks/backlog/example-task.md" ]; then
     printf -- '- Use `tasks/backlog/example-task.md` as a reference for formatting and scope.\n'
   fi
+
+  if [ -f "$PROJECT_ROOT/tasks/backlog/example-node-user-crud.md" ]; then
+    printf -- '- Use `tasks/backlog/example-node-user-crud.md` with `specs/example-node-user-crud.md` as a practical feature example.\n'
+  fi
 }
 
 render_ai_workflow_lines() {
   printf -- '- Read `AGENTS.md` and `PLAYBOOK.md` for the repository workflow and conventions.\n'
+  printf -- '- Use `workflows/execute-work-item.md` as the practical checklist for new user stories, bugs, and enhancements.\n'
   printf -- '- Follow the workflow files in `workflows/` from initialization through review and polish.\n'
   printf -- '- Use `prompts/current-project.md` as the current AI-facing summary of the project.\n'
   printf -- '- Use `prompts/refresh-context.md` when the repository has evolved and the generated guidance may be stale.\n'
@@ -528,6 +533,9 @@ $(render_task_workflow_lines)
 - \`docs/project-context.md\` for the latest stack-aware project summary
 - \`docs/dependencies.md\` for runtime and development dependency snapshots
 - \`docs/stack-guide.md\` for stack-specific architecture guidance
+- \`workflows/execute-work-item.md\` for the practical flow to execute a new story or bug
+- \`specs/example-node-user-crud.md\` for a concrete Node feature example
+- \`tasks/backlog/example-node-user-crud.md\` for the matching example task
 - \`prompts/current-project.md\` for AI-ready implementation context
 - \`prompts/refresh-context.md\` for the context refresh workflow
 EOF

@@ -22,6 +22,8 @@ When implementing work, agents should follow this sequence:
 
 Agents should not skip steps unless explicitly instructed.
 
+For the practical end-to-end flow of executing a new user story or bug, read `workflows/execute-work-item.md`.
+
 ---
 
 # Task Workflow
@@ -70,6 +72,7 @@ Contains development workflows that define how tasks should be executed.
 Example:
 
 workflows/init.md  
+workflows/execute-work-item.md  
 workflows/design.md  
 workflows/plan.md  
 workflows/implement.md  

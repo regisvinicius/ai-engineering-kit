@@ -82,6 +82,15 @@ Development flow:
 init -> design -> plan -> implement -> test -> review -> polish
 ```
 
+For the practical day-to-day execution flow of a user story or bug, generated projects also include:
+
+- `workflows/execute-work-item.md`
+
+For a concrete Node example, generated projects also include:
+
+- `specs/example-node-user-crud.md`
+- `tasks/backlog/example-node-user-crud.md`
+
 ## Context Sync
 
 Generated projects include a managed context sync command:
