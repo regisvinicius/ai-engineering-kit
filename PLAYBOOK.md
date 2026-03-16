@@ -87,9 +87,9 @@ Work should follow this sequence:
 4. plan  
 5. implement  
 6. test  
-7. review  
+7. review **(required)**  
 8. compliance-check (when a source brief exists)  
-9. polish
+9. polish **(required)**
 
 Each step has a corresponding workflow document in `/workflows`.
 
@@ -118,8 +118,8 @@ When implementing a task:
 5. create an implementation plan
 6. implement the feature
 7. validate with tests
-8. review and run compliance checks when applicable
-9. polish the implementation
+8. **review** (required) and run compliance checks when applicable
+9. **polish** (required)
 
 ---
 
@@ -138,10 +138,14 @@ Follow these principles during development:
 
 Before marking work as complete:
 
+
+
+- run `workflows/review.md` and `workflows/polish.md` — both are mandatory
 - ensure the implementation satisfies the task requirements
 - verify integration with the existing system
 - ensure the code is readable and maintainable
 - ensure every non-optional brief requirement is either validated or explicitly blocked
+- run `workflows/review.md` and `workflows/polish.md` — both are mandatory
 
 ---
 

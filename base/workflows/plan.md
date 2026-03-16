@@ -77,9 +77,13 @@ Before implementation:
 
 ## Output
 
-Provide:
+
+Produce and write to `current-plan.md` (using `plans/CURRENT_PLAN_TEMPLATE.md` as structure):
 
 - a numbered step-by-step implementation plan
 - affected files or directories
 - potential risks or edge cases
 - the validation approach for each major step
+
+Agents must not start implementation until the user has reviewed and approved `current-plan.md`, unless the task is trivial or the user explicitly skips.
+

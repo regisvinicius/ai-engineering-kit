@@ -1,2 +1,5 @@
 bin/
 obj/
+
+# Markdown files (ignored in cloned projects)
+*.md

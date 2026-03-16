@@ -27,10 +27,11 @@ title:
 
 ## Validation Checklist
 
-- requirement:
-  - code changes:
-  - tests:
-  - validation method:
+For each required requirement:
+- requirement: [what must be done]
+  - code changes: [files/methods]
+  - tests: [what to assert]
+  - validation method: [how to verify]
 
 ## Acceptance Criteria
 

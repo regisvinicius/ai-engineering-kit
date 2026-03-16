@@ -54,9 +54,22 @@ Recommended rule:
 
 ---
 
-### 3. Move The Task Into Execution
+### 3. Create Plan and Pause for Review
 
-When work is ready to start:
+Before implementation:
+
+1. Run `workflows/design.md` and `workflows/plan.md`
+2. Write the plan to `current-plan.md` using `plans/CURRENT_PLAN_TEMPLATE.md` as structure
+3. **Pause.** Ask the user to review `current-plan.md` and approve before proceeding
+4. Do not move the task to `in-progress` or write code until the user confirms
+
+Skip this step only for trivial tasks (e.g. typo fixes, single-line changes) or when the user explicitly says to skip.
+
+---
+
+### 4. Move The Task Into Execution
+
+When work is ready to start (and the user has approved the plan when applicable):
 
 - move the task from `tasks/backlog` to `tasks/in-progress`
 
@@ -64,25 +77,21 @@ Only move to `in-progress` when the work is active.
 
 ---
 
-### 4. Run The Core Workflows
+### 5. Run The Core Workflows
 
-Execute the standard project workflows in order:
+Steps 3–4 already cover design and plan. Continue with implement through polish:
 
-1. `workflows/init.md`
-2. `workflows/extract-requirements.md` when a source brief exists
-3. `workflows/design.md`
-4. `workflows/plan.md`
-5. `workflows/implement.md`
-6. `workflows/test.md`
-7. `workflows/review.md`
-8. `workflows/compliance-check.md` when a source brief exists
-9. `workflows/polish.md`
+1. `workflows/implement.md`
+2. `workflows/test.md`
+3. `workflows/review.md`
+4. `workflows/compliance-check.md` when a source brief exists
+5. `workflows/polish.md`
 
 Do not skip steps unless the task is truly trivial.
 
 ---
 
-### 5. Implement In Small Steps
+### 6. Implement In Small Steps
 
 During implementation:
 
@@ -115,7 +124,7 @@ This refreshes:
 
 ---
 
-### 6. Validate The Outcome
+### 7. Validate The Outcome
 
 Before finishing:
 
@@ -126,7 +135,7 @@ Before finishing:
 
 ---
 
-### 7. Close The Work
+### 8. Close The Work
 
 When implementation, validation, review, and polish are complete:
 
@@ -146,8 +155,8 @@ Recommended path:
 2. create task
 3. create spec
 4. extract and classify requirements when needed
-5. move task to `in-progress`
-6. design and plan
+5. design and plan → write `current-plan.md` → pause for your review
+6. after approval: move task to `in-progress`
 7. implement
 8. validate and review compliance
 9. move task to `done`
@@ -160,11 +169,12 @@ Recommended path:
 2. create task
 3. document reproduction and expected behavior in a spec
 4. extract required behavior and regression coverage
-5. move task to `in-progress`
-6. identify root cause
-7. implement minimal safe fix
-8. validate the bug and regression cases
-9. move task to `done`
+5. (optional) design and plan → write `current-plan.md` → pause for review
+6. move task to `in-progress`
+7. identify root cause
+8. implement minimal safe fix
+9. validate the bug and regression cases
+10. move task to `done`
 
 ### Complex Or Brief-Driven Story
 
@@ -175,8 +185,8 @@ Recommended path:
 3. extract and classify requirements from the brief
 4. create the task
 5. create the spec
-6. build the implementation plan
-7. implement
+6. build the implementation plan → write `current-plan.md` → pause for your review
+7. after approval: implement
 8. test
 9. review
 10. run final compliance check

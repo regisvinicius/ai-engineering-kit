@@ -1,2 +1,5 @@
 node_modules/
 dist/
+
+# Markdown files (ignored in cloned projects)
+*.md

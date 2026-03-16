@@ -92,3 +92,6 @@ Produce:
 - an extracted required requirements list
 - an extracted optional bonus list
 - a coverage checklist mapping required items to code changes, tests, and validation
+
+
+This output feeds into `workflows/plan.md` and the requirements snapshot in `current-plan.md`.
