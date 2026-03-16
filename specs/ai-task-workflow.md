@@ -15,10 +15,10 @@ The repository already defines how agents should design, implement, and review f
 - Create `/tasks/in-progress`
 - Create `/tasks/done`
 - Add `/tasks/TASK_TEMPLATE.md`
-- Update `AGENTS.MD` to explain the task workflow `backlog -> in-progress -> done`
+- Update `AGENTS.md` to explain the task workflow `backlog -> in-progress -> done`
 
 ## Acceptance Criteria
 
 - The repository contains the three task-state directories under `/tasks`
 - The repository contains `/tasks/TASK_TEMPLATE.md` with the required fields
-- `AGENTS.MD` explains how tasks move from backlog to in-progress to done
+- `AGENTS.md` explains how tasks move from backlog to in-progress to done

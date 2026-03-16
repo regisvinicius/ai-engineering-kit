@@ -1,0 +1,43 @@
+{
+  "name": "AI Engineering Project",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "10.0"
+    }
+  },
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "forwardPorts": [
+    3000,
+    4200,
+    5000,
+    5173
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Node API"
+    },
+    "4200": {
+      "label": "Angular"
+    },
+    "5000": {
+      "label": ".NET API"
+    },
+    "5173": {
+      "label": "React"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "angular.ng-template",
+        "ms-dotnettools.csdevkit",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

@@ -84,7 +84,20 @@ Example:
 
 prompts/analyze-repo.md  
 prompts/implement-task.md  
+prompts/refresh-context.md  
 prompts/refactor.md  
+
+/.devcontainer
+Optional shared container configuration included in container-ready generated projects.
+
+/scripts
+Project scripts, including `scripts/sync-project-context.sh` for refreshing generated context files.
+
+/docs
+Generated and maintained project guidance such as `docs/project-context.md`, `docs/dependencies.md`, and `docs/stack-guide.md`.
+
+/README.md
+Project overview and onboarding guide. In generated projects, this file is refreshed by `scripts/sync-project-context.sh`.
 
 /src  
 Application source code.
@@ -117,6 +130,27 @@ Example stacks:
 - React
 
 Agents should follow stack-specific guidelines if they exist in the repository.
+
+Projects can be generated in two modes:
+
+- standard projects without `.devcontainer`
+- container-ready projects with a shared `.devcontainer`
+
+When `.devcontainer` is present, work can happen in a containerized environment with the required SDKs preinstalled.
+
+Generated projects include curated markdown assets from the base `prompts/`, `specs/`, and `tasks/` scaffold, plus documentation for the selected stack. They should not inherit the full internal history of this generator repository.
+
+Generated projects also include stack-aware context files. Agents should read these before making feature changes:
+
+- `README.md`
+- `prompts/current-project.md`
+- `docs/project-context.md`
+- `docs/dependencies.md`
+- `docs/stack-guide.md`
+
+After adding frameworks, changing dependencies, or reorganizing the application, run `bash scripts/sync-project-context.sh` to refresh the generated `README.md`, context files, and prompts.
+
+When the repository has evolved significantly since generation, agents can use `prompts/refresh-context.md` to refresh the context before planning implementation work.
 
 ---
 

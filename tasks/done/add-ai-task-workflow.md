@@ -15,10 +15,10 @@ The repository originally documented specs and workflows but did not define how 
 - Create the `/tasks` directory
 - Add `backlog`, `in-progress`, and `done` subdirectories
 - Add `tasks/TASK_TEMPLATE.md` with the standard task fields
-- Update `AGENTS.MD` to explain the workflow `backlog -> in-progress -> done`
+- Update `AGENTS.md` to explain the workflow `backlog -> in-progress -> done`
 
 ## Acceptance Criteria
 
 - The repository contains the task-state directories under `/tasks`
 - The repository contains `tasks/TASK_TEMPLATE.md`
-- `AGENTS.MD` documents how tasks move from backlog to in-progress to done
+- `AGENTS.md` documents how tasks move from backlog to in-progress to done

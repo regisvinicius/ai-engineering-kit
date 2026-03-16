@@ -1,0 +1,16 @@
+{
+  "name": "ai-engineering-kit",
+  "private": true,
+  "scripts": {
+    "create": "bash ./scripts/create-ai-project.sh",
+    "create:container": "bash ./scripts/create-ai-container-project.sh",
+    "create:node": "bash ./scripts/create-ai-project.sh node",
+    "create:node:container": "bash ./scripts/create-ai-container-project.sh node",
+    "create:dotnet": "bash ./scripts/create-ai-project.sh dotnet",
+    "create:dotnet:container": "bash ./scripts/create-ai-container-project.sh dotnet",
+    "create:react": "bash ./scripts/create-ai-project.sh react",
+    "create:react:container": "bash ./scripts/create-ai-container-project.sh react",
+    "create:angular": "bash ./scripts/create-ai-project.sh angular",
+    "create:angular:container": "bash ./scripts/create-ai-container-project.sh angular"
+  }
+}
