@@ -8,6 +8,8 @@
     "create:node:container": "bash ./scripts/create-ai-container-project.sh node",
     "create:dotnet": "bash ./scripts/create-ai-project.sh dotnet",
     "create:dotnet:container": "bash ./scripts/create-ai-container-project.sh dotnet",
+    "create:dotnet:basic": "bash ./scripts/create-ai-project.sh dotnet-basic",
+    "create:dotnet:basic:container": "bash ./scripts/create-ai-container-project.sh dotnet-basic",
     "create:react": "bash ./scripts/create-ai-project.sh react",
     "create:react:container": "bash ./scripts/create-ai-container-project.sh react",
     "create:angular": "bash ./scripts/create-ai-project.sh angular",

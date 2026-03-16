@@ -84,7 +84,7 @@ Steps 3–4 already cover design and plan. Continue with implement through polis
 1. `workflows/implement.md`
 2. `workflows/test.md`
 3. `workflows/review.md`
-4. `workflows/compliance-check.md` (always for non-trivial work; produces Delivery Summary)
+4. `workflows/compliance-check.md` when a source brief exists
 5. `workflows/polish.md`
 
 Do not skip steps unless the task is truly trivial.
@@ -139,11 +139,9 @@ Before finishing:
 
 When implementation, validation, review, and polish are complete:
 
-1. Run `workflows/compliance-check.md` and produce the **Delivery Summary** (see `plans/DELIVERY_SUMMARY_TEMPLATE.md`)
-2. Present the Delivery Summary to the user so they can see what was done against requirements and acceptance criteria
-3. Move the task from `tasks/in-progress` to `tasks/done`
+- move the task from `tasks/in-progress` to `tasks/done`
 
-The task should only be marked done when the behavior is working, the Delivery Summary is produced, and the documentation/context is current.
+The task should only be marked done when the behavior is working and the documentation/context is current.
 
 ---
 
@@ -160,7 +158,7 @@ Recommended path:
 5. design and plan → write `current-plan.md` → pause for your review
 6. after approval: move task to `in-progress`
 7. implement
-8. validate, run compliance-check, produce Delivery Summary
+8. validate and review compliance
 9. move task to `done`
 
 ### Bug Fix
@@ -176,8 +174,7 @@ Recommended path:
 7. identify root cause
 8. implement minimal safe fix
 9. validate the bug and regression cases
-10. run compliance-check, produce Delivery Summary
-11. move task to `done`
+10. move task to `done`
 
 ### Complex Or Brief-Driven Story
 
@@ -192,7 +189,7 @@ Recommended path:
 7. after approval: implement
 8. test
 9. review
-10. run compliance-check, produce Delivery Summary
+10. run final compliance check
 11. move task to `done`
 
 ---

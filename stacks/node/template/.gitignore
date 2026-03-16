@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.ai-kit/
 
 # Markdown files (ignored in cloned projects)
 *.md

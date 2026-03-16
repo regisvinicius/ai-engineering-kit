@@ -56,8 +56,6 @@ After implementation:
 
 ## Final Output
 
-**Always end with a Delivery Summary** (Definition of Done report). Use `plans/DELIVERY_SUMMARY_TEMPLATE.md`.
-
 Include:
 
 - short context summary
@@ -65,11 +63,7 @@ Include:
 - task file path
 - spec file path
 - implementation plan
-- **Delivery Summary** – structured report with:
-  - Requirements vs Delivery table (requirement | status | evidence)
-  - Acceptance criteria table (criterion | met? | how)
-  - Artifacts (files created/changed, tests run with results)
-  - Optional items status
-  - Tradeoffs, blockers, or remaining optional items
-
-Do not consider the work complete until this Delivery Summary is produced and presented to the user.
+- files created and changed
+- tests executed and results
+- final requirement-by-requirement compliance review
+- tradeoffs, blockers, or remaining optional items

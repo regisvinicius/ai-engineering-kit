@@ -86,15 +86,9 @@ Call out:
 
 ## Output
 
-**Always produce a Delivery Summary** in the format below. This is the Definition of Done report that shows what was delivered against the requirements.
+Produce:
 
-Use the structure in `plans/DELIVERY_SUMMARY_TEMPLATE.md`:
-
-1. **Task & spec references** – title, task file path, spec file path
-2. **Requirements vs Delivery table** – each requirement with status (done | blocked | missing) and evidence (file:line or test)
-3. **Acceptance criteria table** – each criterion with Met? (yes/no) and how it was validated
-4. **Artifacts** – files created, files changed, tests run with results
-5. **Optional items** – status for bonus/optional work
-6. **Tradeoffs, blockers, notes** – design tradeoffs, technical debt, known limitations
-
-Do not close the task until this report is produced and all required items are either done or explicitly blocked.
+- final requirement-by-requirement compliance review
+- tests executed and their results
+- blockers or missing items
+- optional items status

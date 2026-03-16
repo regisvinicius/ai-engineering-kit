@@ -13,7 +13,7 @@ Steps:
 7. Implement the solution using `workflows/implement.md`
 8. Validate the implementation with `workflows/test.md`
 9. Evaluate quality using `workflows/review.md`
-10. Run `workflows/compliance-check.md` and produce the **Delivery Summary**
+10. If a source brief exists, run `workflows/compliance-check.md`
 11. Improve the implementation using `workflows/polish.md`
 
 Ensure:
@@ -25,7 +25,7 @@ Ensure:
 
 Output:
 
-- **Delivery Summary** (use `plans/DELIVERY_SUMMARY_TEMPLATE.md`) – Requirements vs Delivery, Acceptance criteria, Artifacts
 - summary of changes
 - files modified or created
 - tests executed and results
+- final requirement coverage status

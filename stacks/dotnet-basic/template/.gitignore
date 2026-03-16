@@ -1,6 +1,5 @@
 bin/
 obj/
-*.db
 .ai-kit/
 
 # Markdown files (ignored in cloned projects)
