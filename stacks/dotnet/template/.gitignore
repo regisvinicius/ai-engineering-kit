@@ -5,3 +5,7 @@ obj/
 
 # Markdown files (ignored in cloned projects)
 *.md
+# Exceptions: plan/report artifacts visible in git for review
+!plans/current-plan.md
+!plans/delivery-summary.md
+!plans/requirements-report.md

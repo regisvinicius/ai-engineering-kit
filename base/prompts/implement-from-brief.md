@@ -56,20 +56,14 @@ After implementation:
 
 ## Final Output
 
-**Always end with a Delivery Summary** (Definition of Done report). Use `plans/DELIVERY_SUMMARY_TEMPLATE.md`.
+**For brief-driven work:** Write `plans/requirements-report.md` using `plans/REQUIREMENTS_REPORT_TEMPLATE.md`. This single report replaces the Delivery Summary and includes: Executive Summary, Requirements by level, Technical Specifications, Gaps, Test Coverage, Acceptance criteria, Artifacts, Conclusion.
 
-Include:
+Also include:
 
 - short context summary
 - extracted requirement checklist
 - task file path
 - spec file path
 - implementation plan
-- **Delivery Summary** – structured report with:
-  - Requirements vs Delivery table (requirement | status | evidence)
-  - Acceptance criteria table (criterion | met? | how)
-  - Artifacts (files created/changed, tests run with results)
-  - Optional items status
-  - Tradeoffs, blockers, or remaining optional items
 
-Do not consider the work complete until this Delivery Summary is produced and presented to the user.
+Do not consider the work complete until `requirements-report.md` is written to disk and presented to the user.

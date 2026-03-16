@@ -4,3 +4,7 @@ dist/
 
 # Markdown files (ignored in cloned projects)
 *.md
+# Exceptions: plan/report artifacts visible for review (user may delete later)
+!plans/current-plan.md
+!plans/delivery-summary.md
+!plans/requirements-report.md
