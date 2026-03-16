@@ -50,6 +50,7 @@ Recommended rule:
 
 - user story: focus on business goal, requirements, and acceptance criteria
 - bug: focus on symptoms, reproduction steps, expected behavior, root cause assumptions, and validation
+- complex or brief-driven work: run `workflows/extract-requirements.md` first and keep a required versus optional checklist
 
 ---
 
@@ -68,12 +69,14 @@ Only move to `in-progress` when the work is active.
 Execute the standard project workflows in order:
 
 1. `workflows/init.md`
-2. `workflows/design.md`
-3. `workflows/plan.md`
-4. `workflows/implement.md`
-5. `workflows/test.md`
-6. `workflows/review.md`
-7. `workflows/polish.md`
+2. `workflows/extract-requirements.md` when a source brief exists
+3. `workflows/design.md`
+4. `workflows/plan.md`
+5. `workflows/implement.md`
+6. `workflows/test.md`
+7. `workflows/review.md`
+8. `workflows/compliance-check.md` when a source brief exists
+9. `workflows/polish.md`
 
 Do not skip steps unless the task is truly trivial.
 
@@ -142,11 +145,12 @@ Recommended path:
 1. sync context
 2. create task
 3. create spec
-4. move task to `in-progress`
-5. design and plan
-6. implement
-7. validate
-8. move task to `done`
+4. extract and classify requirements when needed
+5. move task to `in-progress`
+6. design and plan
+7. implement
+8. validate and review compliance
+9. move task to `done`
 
 ### Bug Fix
 
@@ -155,11 +159,28 @@ Recommended path:
 1. sync context
 2. create task
 3. document reproduction and expected behavior in a spec
-4. move task to `in-progress`
-5. identify root cause
-6. implement minimal safe fix
-7. validate the bug and regression cases
-8. move task to `done`
+4. extract required behavior and regression coverage
+5. move task to `in-progress`
+6. identify root cause
+7. implement minimal safe fix
+8. validate the bug and regression cases
+9. move task to `done`
+
+### Complex Or Brief-Driven Story
+
+Recommended path:
+
+1. sync context
+2. summarize repository context
+3. extract and classify requirements from the brief
+4. create the task
+5. create the spec
+6. build the implementation plan
+7. implement
+8. test
+9. review
+10. run final compliance check
+11. move task to `done`
 
 ---
 

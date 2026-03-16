@@ -305,7 +305,9 @@ render_task_workflow_lines() {
 render_ai_workflow_lines() {
   printf -- '- Read `AGENTS.md` and `PLAYBOOK.md` for the repository workflow and conventions.\n'
   printf -- '- Use `workflows/execute-work-item.md` as the practical checklist for new user stories, bugs, and enhancements.\n'
-  printf -- '- Follow the workflow files in `workflows/` from initialization through review and polish.\n'
+  printf -- '- Use `prompts/implement-from-brief.md` when the user provides a complex task brief or requirement-heavy story.\n'
+  printf -- '- When the user provides only the work context, create the task, spec, plan, and validation flow automatically instead of waiting for a long meta-prompt.\n'
+  printf -- '- Follow the workflow files in `workflows/`, including requirement extraction and compliance review when a source brief exists.\n'
   printf -- '- Use `prompts/current-project.md` as the current AI-facing summary of the project.\n'
   printf -- '- Use `prompts/refresh-context.md` when the repository has evolved and the generated guidance may be stale.\n'
   printf -- '- Treat `docs/project-context.md`, `docs/dependencies.md`, and `docs/stack-guide.md` as managed context files.\n'
@@ -462,11 +464,13 @@ Use this file before planning or implementing changes in this project.
 ## Working Guidance
 
 - Read \`README.md\` for the current project overview and workflow summary.
+- If the user provides only a story, bug, feature request, or complex task brief, treat that as enough context to begin the workflow.
 - Read \`docs/project-context.md\` for the current commands, key paths, and detected tooling.
 - Read \`docs/dependencies.md\` before adding new packages or frameworks.
 - Read \`docs/stack-guide.md\` for stack-specific architectural guidance when it exists.
 - Re-run \`bash scripts/sync-project-context.sh\` after changing dependencies, frameworks, infrastructure, or major folder structure.
 - If the generated docs disagree with the repository, refresh context before planning implementation work.
+- Automatically create the task, spec, and plan when the user gives work context but those artifacts do not exist yet.
 
 ## Stack-Specific Guidance
 
@@ -534,8 +538,11 @@ $(render_task_workflow_lines)
 - \`docs/dependencies.md\` for runtime and development dependency snapshots
 - \`docs/stack-guide.md\` for stack-specific architecture guidance
 - \`workflows/execute-work-item.md\` for the practical flow to execute a new story or bug
+- \`workflows/extract-requirements.md\` for requirement extraction and classification
+- \`workflows/compliance-check.md\` for final brief compliance review
 - \`specs/example-node-user-crud.md\` for a concrete Node feature example
 - \`tasks/backlog/example-node-user-crud.md\` for the matching example task
+- \`prompts/implement-from-brief.md\` for complex or brief-driven execution
 - \`prompts/current-project.md\` for AI-ready implementation context
 - \`prompts/refresh-context.md\` for the context refresh workflow
 EOF

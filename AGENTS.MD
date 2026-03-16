@@ -13,16 +13,20 @@ For an overview of the development process, refer to `PLAYBOOK.md`.
 When implementing work, agents should follow this sequence:
 
 1. `workflows/init.md` – understand the repository context
-2. `workflows/design.md` – define the technical approach
-3. `workflows/plan.md` – create an implementation plan
-4. `workflows/implement.md` – implement the feature
-5. `workflows/test.md` – validate behavior
-6. `workflows/review.md` – evaluate code quality
-7. `workflows/polish.md` – improve clarity and maintainability
+2. `workflows/extract-requirements.md` – extract and classify requirements when a source brief exists
+3. `workflows/design.md` – define the technical approach
+4. `workflows/plan.md` – create an implementation plan
+5. `workflows/implement.md` – implement the feature
+6. `workflows/test.md` – validate behavior
+7. `workflows/review.md` – evaluate code quality
+8. `workflows/compliance-check.md` – confirm coverage against the brief when applicable
+9. `workflows/polish.md` – improve clarity and maintainability
 
 Agents should not skip steps unless explicitly instructed.
 
 For the practical end-to-end flow of executing a new user story or bug, read `workflows/execute-work-item.md`.
+
+When a user provides a new story, bug, feature request, or complex task brief, agents should treat that context as enough to start the workflow. Users should not need to restate the full meta-process manually.
 
 ---
 
@@ -72,12 +76,14 @@ Contains development workflows that define how tasks should be executed.
 Example:
 
 workflows/init.md  
+workflows/extract-requirements.md  
 workflows/execute-work-item.md  
 workflows/design.md  
 workflows/plan.md  
 workflows/implement.md  
 workflows/test.md  
 workflows/review.md  
+workflows/compliance-check.md  
 workflows/polish.md  
 
 /prompts  
@@ -86,6 +92,7 @@ Reusable prompts that orchestrate workflows.
 Example:
 
 prompts/analyze-repo.md  
+prompts/implement-from-brief.md  
 prompts/implement-task.md  
 prompts/refresh-context.md  
 prompts/refactor.md  
@@ -155,6 +162,8 @@ After adding frameworks, changing dependencies, or reorganizing the application,
 
 When the repository has evolved significantly since generation, agents can use `prompts/refresh-context.md` to refresh the context before planning implementation work.
 
+When a user provides a complex task brief or requirement-heavy story, agents should use `prompts/implement-from-brief.md` and finish with explicit requirement-by-requirement compliance reporting.
+
 ---
 
 # Agent Behavior
@@ -166,6 +175,8 @@ Agents should:
 - implement changes incrementally
 - avoid large refactors unless required
 - prefer minimal and safe modifications
+- automatically create the task, spec, and implementation plan when the user provides only the work context
+- automatically run requirement extraction and compliance review when a source brief exists
 
 If a feature specification exists, it should be treated as the source of truth.
 

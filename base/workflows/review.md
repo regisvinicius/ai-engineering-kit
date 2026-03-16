@@ -40,6 +40,7 @@ Review the implementation and verify:
 - correctness of the solution
 - logical consistency
 - proper integration with the existing system
+- alignment with the task, spec, and source brief
 
 Look for:
 
@@ -83,10 +84,21 @@ Identify potential risks such as:
 - fragile logic
 - dependency issues
 - performance concerns
+- required items that appear only partially implemented
 
 ---
 
-### 6. Feedback
+### 6. Requirement Coverage Review
+
+Check each non-optional requirement and confirm whether it is:
+
+- implemented and validated
+- blocked with a concrete explanation
+- missing
+
+---
+
+### 7. Feedback
 
 Provide clear and actionable feedback.
 
@@ -105,3 +117,4 @@ The review should produce:
 - prioritized list of issues
 - recommended improvements
 - approval or required changes
+- notes on requirement coverage gaps if any remain

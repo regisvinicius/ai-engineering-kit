@@ -26,6 +26,7 @@ Use this workflow when:
 - Read the task description in `/tasks`
 - Identify the goal and expected outcome
 - Review requirements and acceptance criteria
+- If a brief exists, align the plan to the required versus optional classification
 
 ---
 
@@ -51,6 +52,8 @@ Each step should:
 - be focused on a single change
 - reference specific files when possible
 - be easy to verify
+- identify the required item or items it covers
+- include the relevant validation or test step
 
 Example:
 
@@ -68,6 +71,7 @@ Before implementation:
 - ensure the plan satisfies the task requirements
 - confirm the steps follow the project architecture
 - avoid unnecessary complexity
+- confirm every required requirement is covered or explicitly marked as blocked
 
 ---
 
@@ -78,3 +82,4 @@ Provide:
 - a numbered step-by-step implementation plan
 - affected files or directories
 - potential risks or edge cases
+- the validation approach for each major step

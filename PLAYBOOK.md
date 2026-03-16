@@ -82,16 +82,22 @@ When the repository has evolved enough that the generated guidance may be stale,
 Work should follow this sequence:
 
 1. init  
-2. design  
-3. plan  
-4. implement  
-5. test  
-6. review  
-7. polish
+2. extract-requirements (when a source brief exists)  
+3. design  
+4. plan  
+5. implement  
+6. test  
+7. review  
+8. compliance-check (when a source brief exists)  
+9. polish
 
 Each step has a corresponding workflow document in `/workflows`.
 
 For the practical end-to-end execution flow of a story or bug, start with `workflows/execute-work-item.md`.
+
+For complex or requirement-heavy tasks, use `prompts/implement-from-brief.md`.
+
+In practice, users should be able to provide only the work context. The project guidance should cover task creation, spec creation, planning, implementation, testing, and compliance review without needing a long manual meta-prompt.
 
 ---
 
@@ -107,11 +113,13 @@ When implementing a task:
 
 1. read the task description
 2. analyze the repository context
-3. design a solution
-4. create an implementation plan
-5. implement the feature
-6. validate with tests
-7. review and polish the implementation
+3. extract requirements when a source brief exists
+4. design a solution
+5. create an implementation plan
+6. implement the feature
+7. validate with tests
+8. review and run compliance checks when applicable
+9. polish the implementation
 
 ---
 
@@ -133,6 +141,7 @@ Before marking work as complete:
 - ensure the implementation satisfies the task requirements
 - verify integration with the existing system
 - ensure the code is readable and maintainable
+- ensure every non-optional brief requirement is either validated or explicitly blocked
 
 ---
 

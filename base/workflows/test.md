@@ -1,10 +1,10 @@
-# Review Workflow
+# Testing Workflow
 
 ## Purpose
 
-Evaluate the quality and correctness of an implementation before considering the task complete.
+Validate that the implementation works and that each required requirement has evidence behind it.
 
-The review should identify issues, verify compliance with project conventions, and suggest improvements.
+This workflow focuses on behavior, failure cases, and requirement coverage.
 
 ---
 
@@ -12,96 +12,81 @@ The review should identify issues, verify compliance with project conventions, a
 
 Use this workflow when:
 
-- reviewing completed work
-- preparing a pull request
-- performing a quality check after implementation
+- validating a completed implementation
+- testing a bug fix
+- checking a complex task solution
+- confirming that required behavior is covered before review
 
 ---
 
 ## Workflow
 
-### 1. Triage Matrix
+### 1. Build The Validation Matrix
 
-Classify findings based on severity.
+Start from the required requirements checklist.
 
-Categories:
+For each required item, identify:
 
-- Critical issues — must be fixed before approval
-- Important issues — should be fixed if possible
-- Minor issues — small improvements
-- Suggestions — optional improvements
-
----
-
-### 2. Code Analysis
-
-Review the implementation and verify:
-
-- correctness of the solution
-- logical consistency
-- proper integration with the existing system
-
-Look for:
-
-- potential bugs
-- incomplete implementations
-- incorrect assumptions
+- automated tests
+- manual validation steps
+- runtime or build checks
 
 ---
 
-### 3. Code Quality
+### 2. Test Core Behavior
 
-Evaluate overall code quality.
+Verify the primary success paths first.
 
-Check for:
+Examples:
 
-- code duplication
-- unnecessary complexity
-- unclear naming
-- large or overly complex functions
-- missing error handling
-
----
-
-### 4. Pattern Compliance
-
-Ensure the code follows project conventions.
-
-Verify:
-
-- consistency with existing patterns
-- adherence to architectural structure
-- proper file organization
+- main endpoints
+- core service flows
+- expected state transitions
+- happy-path commands
 
 ---
 
-### 5. Risk Assessment
+### 3. Test Invalid And Edge Cases
 
-Identify potential risks such as:
+Cover:
 
-- edge cases not handled
-- fragile logic
-- dependency issues
-- performance concerns
+- invalid requests
+- missing resources
+- unexpected states
+- input validation failures
+- error handling behavior
 
 ---
 
-### 6. Feedback
+### 4. Test Concurrency-Sensitive Behavior
 
-Provide clear and actionable feedback.
+When the implementation uses shared in-memory state or orchestration logic, add focused tests for:
 
-Include:
+- concurrent requests
+- race-prone updates
+- ordering-sensitive flows
+- thread-safe access patterns
 
-- issues to fix
-- suggested improvements
-- positive observations when applicable
+---
+
+### 5. Run Commands And Record Results
+
+Run the most relevant validation commands.
+
+Record:
+
+- test commands
+- pass or fail results
+- important warnings
+- anything that could not be validated
 
 ---
 
 ## Output
 
-The review should produce:
+Produce:
 
-- prioritized list of issues
-- recommended improvements
-- approval or required changes
+- tests executed
+- validation results
+- uncovered areas
+- remaining risks or blockers

@@ -23,6 +23,7 @@ Use this workflow when:
 
 ### 1. Repository Exploration
 
+- Read `README.md` first
 - Explore the project structure
 - Identify main modules and directories
 - Locate entry points (server, app, main)
@@ -71,6 +72,7 @@ Summarize key findings:
 - relevant file paths
 - architectural patterns
 - constraints or assumptions
+- current commands and validation paths when available
 
 ---
 

@@ -79,12 +79,18 @@ backlog -> in-progress -> done
 Development flow:
 
 ```text
-init -> design -> plan -> implement -> test -> review -> polish
+init -> extract-requirements (when needed) -> design -> plan -> implement -> test -> review -> compliance-check (when needed) -> polish
 ```
 
 For the practical day-to-day execution flow of a user story or bug, generated projects also include:
 
 - `workflows/execute-work-item.md`
+- `workflows/extract-requirements.md`
+- `workflows/compliance-check.md`
+
+For complex or brief-driven work, generated projects also include:
+
+- `prompts/implement-from-brief.md`
 
 For a concrete Node example, generated projects also include:
 
@@ -108,6 +114,19 @@ This refreshes:
 - `prompts/current-project.md`
 
 Use it after adding frameworks, changing dependencies, introducing infrastructure files, or reorganizing the project.
+
+## Better Complex Task Coverage
+
+The scaffold now supports requirement-heavy tasks more explicitly:
+
+- extract requirements before coding
+- classify required versus optional items
+- map required items to code changes, tests, and validation
+- finish with a final compliance review against the source brief
+
+This makes it easier to use the generated repository for complex tasks, take-homes, and requirement-heavy exercises.
+
+The intended experience is that you provide the work context only, and the generated project guidance takes care of the rest of the workflow.
 
 ## Repository Structure
 
