@@ -1,9 +1,11 @@
 export function Home() {
   return (
     <>
-      <h1 style={{ marginBottom: "0.5rem" }}>React App Ready</h1>
-      <p style={{ margin: 0, color: "#475569" }}>
-        Your Vite + React + TypeScript project has been generated successfully.
+      <h1 className="mb-2 text-2xl font-semibold text-slate-800">
+        React App Ready
+      </h1>
+      <p className="text-slate-600">
+        Vite + React 19 + Tailwind + TanStack Router/Query/Form
       </p>
     </>
   );

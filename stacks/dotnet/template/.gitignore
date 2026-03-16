@@ -1,5 +1,6 @@
 bin/
 obj/
+*.db
 
 # Markdown files (ignored in cloned projects)
 *.md

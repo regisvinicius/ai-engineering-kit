@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This stack is a minimal ASP.NET Core Web API project.
+This stack is an ASP.NET Core Web API with EF Core (SQLite), Swagger, FluentValidation, and built-in health checks.
 
 ## Structure
 
@@ -10,16 +10,29 @@ This stack is a minimal ASP.NET Core Web API project.
 - `Api/Controllers/` contains HTTP controllers
 - `Api/Services/` contains application or domain services
 - `Api/Models/` contains DTOs and response models
-- `appsettings.json` stores environment-independent configuration
+- `Api/Data/` contains DbContext and entity configuration
+- `Api/Validators/` contains FluentValidation rules
+- `appsettings.json` stores configuration (including `ConnectionStrings:DefaultConnection`)
+- `appsettings.Example.json` documents connection string formats (SQLite + MySQL)
 
 ## Working Style
 
-- Keep controllers focused on HTTP concerns
-- Move business logic into services
-- Use models to keep request and response shapes explicit
-- Keep `Program.cs` readable and minimal as the app evolves
+- Keep controllers thin; move business logic into services
+- Validate request DTOs with FluentValidation at controller boundaries
+- Use EF Core migrations for schema changes: `dotnet ef migrations add <Name>`
+- Use `AddDbContextCheck` for readiness; keep `/health` for health probes
+- Swagger runs in Development by default
 
 ## Commands
 
-- `dotnet run --project Api.csproj` to run the API
-- `dotnet build Api.csproj` to build the project
+- `dotnet run` to run the API
+- `dotnet build` to build
+- `dotnet ef migrations add Initial` to create the first migration (after model changes)
+- `dotnet ef database update` to apply migrations
+
+## Endpoints
+
+- `GET /health` – health check (EF Core DB check)
+- `GET /status` – app status (custom)
+- `GET /swagger` – Swagger UI (Development)
+- `GET/POST /users` – CRUD example

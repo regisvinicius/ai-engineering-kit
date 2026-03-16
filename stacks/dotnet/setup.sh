@@ -7,4 +7,4 @@ if [ "${AI_KIT_SKIP_SETUP:-0}" = "1" ]; then
   exit 0
 fi
 
-dotnet restore
+dotnet restore Api.csproj

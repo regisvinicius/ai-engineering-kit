@@ -12,5 +12,6 @@ const parsePort = (value: string | undefined) => {
 
 export const env = {
   host: process.env.HOST ?? "0.0.0.0",
-  port: parsePort(process.env.PORT)
+  port: parsePort(process.env.PORT),
+  databaseUrl: process.env.DATABASE_URL ?? ""
 };

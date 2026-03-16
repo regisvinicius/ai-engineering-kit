@@ -7,13 +7,20 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/src/server.js",
     "lint": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate --config=drizzle.config.ts",
+    "db:studio": "drizzle-kit studio",
     "sync:context": "bash scripts/sync-project-context.sh"
   },
   "dependencies": {
-    "fastify": "^4.28.1"
+    "drizzle-orm": "^0.38.2",
+    "fastify": "^4.28.1",
+    "mysql2": "^3.11.5",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "drizzle-kit": "^0.31.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }

@@ -2,21 +2,25 @@
 
 ## Purpose
 
-This stack is an Angular application with a lightweight starter structure.
+This stack is an Angular 19 application with Router, Reactive Forms, HttpClient, and Signals.
 
 ## Structure
 
-- `src/main.ts` bootstraps the Angular app
-- `src/app/app.component.ts` defines the root component
-- `src/app/app.component.html` contains the root template
-- `src/styles.css` contains the global styles
+- `src/main.ts` bootstraps the app with `appConfig`
+- `src/app/app.config.ts` provides Router and HttpClient
+- `src/app/app.routes.ts` defines routes (lazy-loaded components)
+- `src/app/app.component.*` is the root shell with nav + router-outlet
+- `src/app/pages/` contains page components (home, about)
+- `src/app/services/` contains injectable services (HttpClient usage, signals)
 
 ## Working Style
 
-- Add new UI features under `src/app` with clear component boundaries
-- Keep reusable presentation logic in dedicated components
-- Treat `angular.json` and TypeScript config files as part of the runtime contract
-- Keep root component responsibilities small as the app grows
+- Use `inject()` for dependency injection in standalone components
+- Prefer Signals for component state; use `computed()` for derived values
+- Use Reactive Forms with `FormBuilder` and `Validators` at boundaries
+- Add new routes in `app.routes.ts` with lazy `loadComponent`
+- Keep route handlers thin; move HTTP and business logic to services
+- Use `RouterLink` and `routerLinkActive` for navigation
 
 ## Commands
 

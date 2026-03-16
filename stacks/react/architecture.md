@@ -1,19 +1,26 @@
 # React Architecture
 
-Stack
+## Stack
 
-- React
+- React 19
 - TypeScript
 - Vite
+- Tailwind CSS
+- Radix UI
+- TanStack Router
+- TanStack Query
+- TanStack Form
 
-Structure
+## Structure
 
 - src/main.tsx
-- src/App.tsx
-- src/pages/Home.tsx
+- src/router.tsx
+- src/pages/Home.tsx, About.tsx
 - src/components/Layout.tsx
-- public/
+- src/lib/queryClient.ts
+- src/index.css
 
-UI
+## Routes
 
-- Home page renders "React App Ready"
+- `/` – Home
+- `/about` – About

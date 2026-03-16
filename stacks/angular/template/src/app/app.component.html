@@ -1,6 +1,9 @@
 <main class="app-shell">
+  <nav>
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
   <section class="card">
-    <h1>Angular App Ready</h1>
-    <p>Your Angular project has been generated successfully.</p>
+    <router-outlet />
   </section>
 </main>

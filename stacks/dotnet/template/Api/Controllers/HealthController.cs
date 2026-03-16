@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers;
 
 [ApiController]
-[Route("health")]
+[Route("status")]
 public class HealthController : ControllerBase
 {
     private readonly HealthService _healthService;

@@ -201,6 +201,14 @@ detect_additional_frameworks() {
     append_unique "Prisma"
   fi
 
+  if [ -f "$PROJECT_ROOT/drizzle.config.ts" ] || [ -f "$PROJECT_ROOT/drizzle.config.js" ] || package_has_dependency "drizzle-orm"; then
+    append_unique "Drizzle"
+  fi
+
+  if package_has_dependency "zod"; then
+    append_unique "Zod"
+  fi
+
   if [ -f "$PROJECT_ROOT/tailwind.config.js" ] || [ -f "$PROJECT_ROOT/tailwind.config.cjs" ] || [ -f "$PROJECT_ROOT/tailwind.config.ts" ] || package_has_dependency "tailwindcss"; then
     append_unique "Tailwind CSS"
   fi

@@ -1,6 +1,8 @@
 {
   "name": "AI Engineering Project",
-  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/cwd",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"
@@ -9,7 +11,9 @@
       "version": "10.0"
     }
   },
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "containerEnv": {
+    "DATABASE_URL": "mysql://root:dev@db:3306/app"
+  },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "forwardPorts": [
     3000,
