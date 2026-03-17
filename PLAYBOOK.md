@@ -33,6 +33,9 @@ Guidelines that define how development steps should be executed.
 
 `workflows/execute-work-item.md` is the practical checklist for starting and completing a new user story or bug.
 
+/plans  
+Plan templates and current plan. Used by `workflows/plan.md`.
+
 /scripts  
 Project scripts such as `scripts/sync-project-context.sh`.
 

@@ -1,6 +1,6 @@
 # AI Engineering Kit
 
-AI Engineering Kit is a project generator for AI-friendly application scaffolds.
+AI Engineering Kit is an **AI engineering template generator** for AI-friendly application scaffolds. Works with **Codex**, **Cursor**, and **Claude**.
 
 It creates runnable projects with:
 
@@ -10,10 +10,12 @@ It creates runnable projects with:
 - optional `.devcontainer` support
 - generated project context files refreshed by `scripts/sync-project-context.sh`
 
+**Full developer guide:** [`docs/guide.md`](docs/guide.md) – folder structure, workflow, when to use workflows vs prompts vs tasks, and AI agent usage.
+
 ## Supported Stacks
 
 - Node.js + Fastify + TypeScript
-- ASP.NET Core Web API
+- ASP.NET Core Web API (full and basic)
 - React + Vite + TypeScript
 - Angular
 
@@ -27,6 +29,7 @@ Every generated project includes:
 - `specs/`
 - `workflows/`
 - `prompts/`
+- `plans/`
 - `docs/`
 - `scripts/sync-project-context.sh`
 
@@ -58,6 +61,9 @@ pnpm run create:node:container payments-api
 
 pnpm run create:dotnet billing-api
 pnpm run create:dotnet:container billing-api
+
+pnpm run create:dotnet:basic simple-api
+pnpm run create:dotnet:basic:container simple-api
 
 pnpm run create:react dashboard
 pnpm run create:react:container dashboard
@@ -133,6 +139,10 @@ The intended experience is that you provide the work context only, and the gener
 - `template/` – shared scaffold (tasks, specs, workflows, prompts, plans, scripts, .devcontainer) copied into generated projects
 - `stacks/` – stack templates, setup scripts, and stack-aware context assets
 - `scripts/` – generator entrypoints (`create-ai-project.sh`, `create-ai-container-project.sh`)
+
+## Documentation
+
+See **[docs/guide.md](docs/guide.md)** for the full developer guide.
 
 ## Goal
 

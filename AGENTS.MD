@@ -106,9 +106,12 @@ Example:
 
 prompts/analyze-repo.md  
 prompts/implement-from-brief.md  
-prompts/implement-task.md  
-prompts/refresh-context.md  
-prompts/refactor.md  
+prompts/implement-task.md
+prompts/refresh-context.md
+prompts/refactor.md 
+
+/plans
+Plan templates and current plan. Used by `workflows/plan.md`.
 
 /.devcontainer
 Optional shared container configuration included in container-ready generated projects.
