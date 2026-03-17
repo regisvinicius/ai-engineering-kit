@@ -110,11 +110,19 @@ Include:
 
 ---
 
+## When Issues Are Found
+
+If the review identifies Critical, Important, Minor, or Suggestion items to fix:
+
+1. Write the review report to `plans/review-report.md` (see `plans/REVIEW_REPORT_TEMPLATE.md` for structure)
+2. Run `workflows/review-fix.md` to address the issues in priority order
+
+---
+
 ## Output
 
-The review should produce:
+Produce a prioritized list of issues, recommended improvements, approval or required changes, and notes on requirement coverage gaps if any remain.
 
-- prioritized list of issues
-- recommended improvements
-- approval or required changes
-- notes on requirement coverage gaps if any remain
+**When producing a written report:** Use the structure in `plans/REVIEW_REPORT_TEMPLATE.md` and write to `plans/review-report.md`.
+
+**When issues are found:** Run `workflows/review-fix.md` to address them. The user can provide the review report (or its path) and say "fix the review issues" or "run review-fix".

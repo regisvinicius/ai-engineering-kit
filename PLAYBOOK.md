@@ -61,7 +61,7 @@ The shared container supports:
 - Node-based stacks such as Node, React, and Angular
 - .NET-based stacks such as ASP.NET Web API
 
-Generated projects inherit curated markdown assets from the base `prompts/`, `specs/`, and `tasks/` scaffold, plus documentation for the selected stack. They should not inherit the full internal history of this generator repository.
+Generated projects inherit curated markdown assets from the template `prompts/`, `specs/`, and `tasks/` scaffold, plus documentation for the selected stack. They should not inherit the full internal history of this generator repository.
 
 Generated projects also include stack-aware context files that should be read before major changes:
 

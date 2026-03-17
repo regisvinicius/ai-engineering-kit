@@ -4,7 +4,20 @@ This repository is designed to work with AI coding agents such as Codex, Claude 
 
 Agents should follow the workflows and project conventions defined in this repository.
 
+**Critical:** When given a task, story, or bug: create a plan (`plans/current-plan.md`), pause for user approval, and do not implement until the user confirms. See `workflows/execute-work-item.md`.
+
 For an overview of the development process, refer to `PLAYBOOK.md`.
+
+---
+
+# Critical: Plan Before Implement
+
+**When the user provides a task, story, bug, or feature request:**
+
+- **Create** `plans/current-plan.md` first (via `workflows/plan.md`).
+- **Pause** and ask the user to review and approve before implementing.
+- **Do not** move the task to `in-progress` or write code until the user approves.
+- **Skip** only for trivial changes (typos, single lines) or when the user explicitly says to skip.
 
 ---
 
@@ -148,7 +161,7 @@ Projects can be generated in two modes:
 
 When `.devcontainer` is present, work can happen in a containerized environment with the required SDKs preinstalled.
 
-Generated projects include curated markdown assets from the base `prompts/`, `specs/`, and `tasks/` scaffold, plus documentation for the selected stack. They should not inherit the full internal history of this generator repository.
+Generated projects include curated markdown assets from the template `prompts/`, `specs/`, and `tasks/` scaffold, plus documentation for the selected stack. They should not inherit the full internal history of this generator repository.
 
 Generated projects also include stack-aware context files. Agents should read these before making feature changes:
 

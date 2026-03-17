@@ -130,10 +130,9 @@ The intended experience is that you provide the work context only, and the gener
 
 ## Repository Structure
 
-- `base/` contains the shared scaffold copied into generated projects
-- `stacks/` contains stack templates, setup scripts, and stack-aware context assets
-- `scripts/` contains the generator entrypoints
-- `specs/` and `tasks/` track work on this generator itself
+- `template/` – shared scaffold (tasks, specs, workflows, prompts, plans, scripts, .devcontainer) copied into generated projects
+- `stacks/` – stack templates, setup scripts, and stack-aware context assets
+- `scripts/` – generator entrypoints (`create-ai-project.sh`, `create-ai-container-project.sh`)
 
 ## Goal
 

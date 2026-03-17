@@ -80,7 +80,7 @@ mkdir -p "$TARGET_DIR"
 
 cp "$REPO_ROOT/AGENTS.md" "$TARGET_DIR/AGENTS.md"
 cp "$REPO_ROOT/PLAYBOOK.md" "$TARGET_DIR/PLAYBOOK.md"
-cp -R "$REPO_ROOT/base"/. "$TARGET_DIR"
+cp -R "$REPO_ROOT/template"/. "$TARGET_DIR"
 
 if [ "$DEVCONTAINER_MODE" = "exclude" ]; then
   rm -rf "$TARGET_DIR/.devcontainer"
